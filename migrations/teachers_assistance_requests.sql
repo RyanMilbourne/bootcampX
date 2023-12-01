@@ -5,7 +5,7 @@ CREATE TABLE teachers (
   end_date DATE,
   is_active BOOLEAN DEFAULT TRUE
 );
-CREATE TABLE assistance_request (
+CREATE TABLE assistance_requests (
   id SERIAL PRIMARY KEY NOT NULL,
   assignment_id INTEGER REFERENCES assignments(id) ON DELETE CASCADE,
   student_id INTEGER REFERENCES students(id) ON DELETE CASCADE,
